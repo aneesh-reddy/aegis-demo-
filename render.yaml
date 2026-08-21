@@ -1,0 +1,22 @@
+# Render Blueprint for the Aegis Redact demo site.
+# Docs: https://render.com/docs/blueprint-spec
+# After pushing this repo to GitHub/GitLab, create a new service from
+# "Blueprint" in the Render dashboard and point it at this file.
+
+services:
+  - type: web
+    name: aegis-redact
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: node .output/server/index.mjs
+    # TanStack Start + nitro node-server listens on this port.
+    envVars:
+      - key: NODE_ENV
+        value: production
+      # Render injects PORT automatically; the server reads process.env.PORT.
+      # No need to set it manually, but listing it documents the contract.
+      - key: PORT
+        sync: false
+    healthCheckPath: /
+    autoDeploy: true
