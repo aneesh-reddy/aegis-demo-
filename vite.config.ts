@@ -14,7 +14,7 @@ export default defineConfig({
   },
   // Vercel needs the `vercel` nitro preset, which emits Vercel's native build
   // output format (.vercel/output/) that Vercel auto-detects — no `dist`
-  // directory required. (Inside the Lovable sandbox this is overridden back to
-  // cloudflare-module for publishing; it only takes effect on a real Vercel deploy.)
+  // directory required. (In the hosted preview environment this is overridden back to
+  // cloudflare-module; it only takes effect on a real Vercel deploy.)
   nitro: { preset: "vercel" },
 });

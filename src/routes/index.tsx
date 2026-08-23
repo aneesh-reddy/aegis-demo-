@@ -143,7 +143,7 @@ function LandingPage() {
           <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
             <a
               href="#upload"
-              className="inline-flex items-center gap-2 bg-foreground px-6 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-background transition-colors hover:bg-signal"
+              className="inline-flex items-center gap-2 bg-signal px-6 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-background transition-colors hover:bg-signal/80"
             >
               Filter your sensitive information now
             </a>
